@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View, ScrollView, TouchableOpacity } from 'react-native';
 import ActionButton from 'react-native-action-button';
 import Search from 'react-native-vector-icons/EvilIcons';
+import ActionButtonIcon from 'react-native-vector-icons/SimpleLineIcons'
 
 
 
@@ -30,7 +31,7 @@ class Main extends React.Component{
     return (
       <View style={{flex: 1}}>
         <View style={{height: 60, backgroundColor: 'grey', paddingTop: 32, alignItems: 'center'}}>
-          <Text style={{fontSize: 16}}>Nominator</Text>
+          <Text style={{fontSize: 16}}>WING @TM</Text>
         </View>
 
         <View style={{flexDirection: 'row', paddingHorizontal: 16, paddingVertical: 16}}>
@@ -42,7 +43,7 @@ class Main extends React.Component{
             >
               <Text style={[
                     {fontWeight: 'bold'},
-                    this.state.page === 'request' && {color: '#ee7202'}
+                    this.state.page === 'request' && {color: '#ffffff'}
                   ]}
                 >
                 Request
@@ -56,7 +57,7 @@ class Main extends React.Component{
               >
               <Text style={[
                     {fontWeight: 'bold'},
-                    this.state.page === 'task' && {color: '#ee7202'}
+                    this.state.page === 'task' && {color: '#ffffff'}
                     ]}
                   >
                   Task
@@ -67,6 +68,18 @@ class Main extends React.Component{
         <ScrollView style={{flex: 1}}>
           {displayedPage}
         </ScrollView>
+
+        <ActionButton buttonColor='black'>
+          <ActionButton.Item buttonColor='grey' title='Guideline' LongPress={()=>null}>
+            <ActionButtonIcon name="doc" size={24} color="#ffffff" />
+          </ActionButton.Item>
+          <ActionButton.Item buttonColor='grey' title='New Application' LongPress={()=>null}>
+            <ActionButtonIcon name="pencil" size={24} color="#ffffff" />
+          </ActionButton.Item>
+          <ActionButton.Item buttonColor='grey' title='Activity Log' LongPress={()=>null}>
+            <ActionButtonIcon name="list" size={24} color="#ffffff" />
+          </ActionButton.Item>
+        </ActionButton>
 
       </View>
     )

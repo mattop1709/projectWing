@@ -6,51 +6,49 @@ const applications =
 [
   {
    number: '76VD-TG7Q',
-   status: 'Pending Nomination',
    name: 'Mohammad Hafiz bin Burhan',
    travelType: 'Site Survey'
    },
    {
      number: 'F54Y-82V5',
-     status: 'Pending Approval',
      name: 'Ali Muhd Wasil bin Ali Absar',
      travelType: 'Berjimba Berdansa Berdosa'
    },
    {
      number: 'F54Y-82V5',
-     status: 'Pending Approval',
      name: 'Mohammad Saifuddin Othman bin Kamal',
      travelType: 'Berjimba Berdansa Berdosa'
    },
    {
      number: 'F54Y-82V5',
-     status: 'Pending Approval',
      name: 'Nur Sazaliza Hiryiani Binti Zainol Abidin',
      travelType: 'Mentelaah Ilmu untuk Cukup Bekalan'
    },
    {
      number: 'F54Y-82V5',
-     status: 'Pending Approval',
      name: 'Nur Sazaliza Hiryiani Binti Zainol Abidin',
      travelType: 'Mentelaah Ilmu untuk Cukup Bekalan'
    },
 ]
 
-const ApplicationSingle = ({number, status, name, travelType}) =>
-<View  style={{flexDirection: 'row', flex: 0.2, width: '95%', paddingHorizontal: 8, paddingVertical: 16, marginBottom: 16, justifyContent: 'flex-start', backgroundColor: '#73d6f7'}}>
-  <View style={{width: '20%'}}>
-    <Text style={{fontSize: 16, paddingBottom: 8}}>Ref ID</Text>
-    <Text style={{fontSize: 16, paddingBottom: 8}}>Status</Text>
-    <Text style={{fontSize: 16, paddingBottom: 8}}>Name</Text>
-    <Text style={{fontSize: 16, paddingBottom: 8}}>Type</Text>
+const ApplicationSingle = ({number, name, travelType}) =>
+<TouchableOpacity LongPress={()=>null} style={{flex: 0.2, width: '95%', paddingHorizontal: 8, paddingVertical: 16, marginBottom: 16, justifyContent: 'flex-start', backgroundColor: '#c4c4c4'}}>
+  <View style={{flexDirection: 'row'}}>
+    <View style={{width: '20%'}}>
+      <Text style={{fontSize: 16, paddingBottom: 8}}>Ref ID</Text>
+      <Text style={{fontSize: 16, paddingBottom: 8}}>Name</Text>
+      <Text style={{fontSize: 16, paddingBottom: 16}}>Type</Text>
+    </View>
+    <View style={{width: '80%'}}>
+        <Text style={{fontSize: 16, paddingBottom: 8, color: 'white'}}>{number}</Text>
+        <Text style={{fontSize: 16, paddingBottom: 8, color: 'white'}}>{name}</Text>
+        <Text style={{fontSize: 16, paddingBottom: 16, color: 'white'}}>{travelType}</Text>
+    </View>
   </View>
-  <TouchableOpacity LongPress={()=> null} style={{width: '80%'}}>
-      <Text style={{fontSize: 16, paddingBottom: 8, color: 'white'}}>{number}</Text>
-      <Text style={{fontSize: 16, paddingBottom: 8, color: 'white'}}>{status}</Text>
-      <Text style={{fontSize: 16, paddingBottom: 8, color: 'white'}}>{name}</Text>
-      <Text style={{fontSize: 16, paddingBottom: 8, color: 'white'}}>{travelType}</Text>
-  </TouchableOpacity>
-</View>
+  <View style={{backgroundColor: 'black', paddingVertical: 16, alignItems: 'center'}}>
+    <Text style={{color:'#ffffff'}}>Tracking Progress Diagram</Text>
+  </View>
+</TouchableOpacity>
 
 
 class Request extends React.Component{
@@ -60,7 +58,6 @@ class Request extends React.Component{
       {applications.map (applicationSingle =>
         <ApplicationSingle
           number={applicationSingle.number}
-          status={applicationSingle.status}
           name={applicationSingle.name}
           travelType={applicationSingle.travelType}
           />
