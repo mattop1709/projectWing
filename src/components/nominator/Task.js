@@ -31,7 +31,7 @@ const applications =
 ]
 
 const ApplicationSingle = ({number, name, travelType}) =>
-<TouchableOpacity LongPress={()=>null}  style={{flex: 0.2, width: '95%', paddingHorizontal: 8, paddingVertical: 16, marginBottom: 16, justifyContent: 'flex-start', backgroundColor: '#c4c4c4'}}>
+<TouchableOpacity LongPress={()=>null}  style={{shadowOpacity: 0.8, flex: 0.2, width: '95%', paddingHorizontal: 8, paddingVertical: 16, marginBottom: 16, justifyContent: 'flex-start', backgroundColor: '#c4c4c4'}}>
   <View style={{flexDirection: 'row'}}>
     <View style={{width: '20%'}}>
       <Text style={{fontSize: 16, paddingBottom: 8}}>Ref ID</Text>
@@ -54,7 +54,7 @@ const ApplicationSingle = ({number, name, travelType}) =>
 class Task extends React.Component{
   render() {
     return(
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', marginTop: 8}}>
         {applications.map (applicationSingle =>
           <ApplicationSingle
             number={applicationSingle.number}
