@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, DatePickerIOS } from 'react-native';
 import Next from 'react-native-vector-icons/Entypo'
 
 class TravelForm extends React.Component {
@@ -58,6 +58,7 @@ class TravelForm extends React.Component {
                     />
                 </View>
           </View>
+
 
       </View>
 

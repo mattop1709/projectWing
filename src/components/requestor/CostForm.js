@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import Next from 'react-native-vector-icons/Entypo'
 
-class FinancialForm extends React.Component {
+class CostForm extends React.Component {
   render() {
     return (
       <View style={{shadowOpacity: 0.7, height: '100%', width: '90%', paddingHorizontal: 8, paddingVertical: 16, marginBottom: 16, justifyContent: 'flex-start', backgroundColor: '#ffffff'}}>
@@ -62,4 +62,4 @@ class FinancialForm extends React.Component {
   }
 }
 
-export default FinancialForm
+export default CostForm
